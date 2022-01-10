@@ -23,7 +23,7 @@ function stillRight (button) {
 }
 
 function retort (button) {
-    // swaps the two buttons' messages using a truthy-falsey trick
+    // swaps the two buttons' messages using a truthy-falsy trick
     document.getElementById(`button-${button}-text`).innerHTML = ""
     document.getElementById(`button-${Number(!button)}-text`).innerHTML = "No, <em>I'm</em> right!"
 }
