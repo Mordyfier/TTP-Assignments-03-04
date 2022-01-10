@@ -1,17 +1,31 @@
 // 1. Fighting buttons:
-
-function fight (buttNo) {
-    const b0text = document.getElementById('button-0-text');
-    const b1text = document.getElementById('button-1-text');
-    if (!b0text.innerHTML && !b1text.innerHTML) {
-        document.getElementById(`button-${buttNo}-text`).innerHTML = "I'm right!";
-    } else if (buttNo) {
-        b0text.innerHTML = "";
-        b1text.innerHTML = "No, <em>I'm</em> right!";
+let lastClicked = -1;
+function fight (button) {
+    // a little convoluted, but the button number (passed from the HTML) serves as a boolean
+    // for the text changing mechanism:
+    if (lastClicked === -1) {
+        // if the argument didn't start yet (neither buttons have text next to them),
+        // start the argument with whichever button was clicked
+        document.getElementById(`button-${button}-text`).innerHTML = "I'm right!";
+        lastClicked = button;
     } else {
-        b1text.innerHTML = "";
-        b0text.innerHTML = "No, <em>I'm</em> right!";
+        // once the argument started (otherwise the other branch would be chosen),
+        // if the currently 'right' button was clicked again - its message changes to "I'm still right"
+        // otherwise, the new button becomes the 'right' one.
+        button === lastClicked ? stillRight(button) : retort(lastClicked);
+        lastClicked = button;
     }
+}
+
+function stillRight (button) {
+    // replaces the current 'right' button's message with one that is more appropriate
+    document.getElementById(`button-${button}-text`).innerHTML = "I'm still right!";
+}
+
+function retort (button) {
+    // swaps the two buttons' messages using a truey-falsey trick
+    document.getElementById(`button-${button}-text`).innerHTML = ""
+    document.getElementById(`button-${Number(!button)}-text`).innerHTML = "No, <em>I'm</em> right!"
 }
 
 //2. Hover-averse text:
