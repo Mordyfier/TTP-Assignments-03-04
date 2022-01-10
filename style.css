@@ -1,30 +1,55 @@
-* {
-    box-sizing: border-box;
-}
-
-
 body {
-    margin: 0
+    margin: 0;
+    background-color: #666;
+    font-family: 'PT Sans', sans-serif;
 }
-
-
-.no-hovering {
+.buttons-title {
+    width: 200px;
+    margin: 10px auto;
+}
+.fighting-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px auto;
+    height: 150px;
     width: 500px;
+    border-radius: 10px;
+    background-color: whitesmoke;
 }
 
 .buttons {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 20px 20px;
+    margin-left: 50px;
 }
 .buttons > button {
-    margin:auto;
+    font-family: 'PT Sans', sans-serif;
+    margin: 15px 0px;
+    height: 30px;
+    width: 180px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 7px;
 }
 .button-texts {
-    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+.button-texts > h1 {
+    margin: 30px 10px;
 }
 
+.no-hovering {
+    width: 750px;
+    margin: 50px auto;
+    font-size: 40px;
+    text-align: center;
+}
 
 .form {
     display:flex;
@@ -45,7 +70,41 @@ body {
     height: 30px;
     width: 180px;
     background-color: steelblue;
+    color: whitesmoke;
+    border: none;
+    border-radius: 7px;
+}
+
+.sphere {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#sphere-form {
+    margin-bottom: 10px;
+}
+#sphere-radius {
+    height: 30px;
+    width: 180px;
+    background-color: whitesmoke;
     color: white;
     border: none;
     border-radius: 7px;
+}
+#submit-radius {
+    height: 30px;
+    width: 180px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+#sphere-result {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
 }

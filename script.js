@@ -40,6 +40,6 @@ radiusSubmit.addEventListener('click', () => {
     if (radius < 0) {
         result.textContent = "Negative volume."
     } else {
-        result.textContent = `The volume of a sphere with radius ${radius} is ${((4/3)*Math.PI*Math.pow(radius, 3))}.`;
+        result.textContent = `The volume of a sphere with radius ${radius} is ${Math.floor((4/3)*Math.PI*Math.pow(radius, 3)*1000)/1000}.`;
     }
 });
