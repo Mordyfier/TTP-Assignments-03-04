@@ -24,10 +24,11 @@ function stillRight (button) {
 }
 
 function retort (button) {
-    // swaps the two buttons' messages using a truey-falsey trick
+    // swaps the two buttons' messages using a truthy-falsy trick
     document.getElementById(`button-${button}-text`).innerHTML = "";
     document.getElementById(`button-${button}-text`).style.animation = ""; 
     document.getElementById(`button-${Number(!button)}-text`).innerHTML = "No, <em>I'm</em> right!";
+
 }
 
 //2. Hover-averse text:
