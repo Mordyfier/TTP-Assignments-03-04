@@ -36,6 +36,9 @@ body {
     height: 35px;
     width: 180px;
     background-color: purple;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: white;
     border: none;
     border-radius: 7px;
@@ -76,6 +79,9 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid steelblue;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 500;
     padding: 5px 10px;
 }
 
@@ -84,6 +90,9 @@ body {
     height: 40px;
     width: 180px;
     background-color: steelblue;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: whitesmoke;
     border: none;
     border-radius: 7px;
@@ -97,7 +106,8 @@ body {
     width: 800px;
     height: 250px;
     margin: 50px auto;
-    background-color: limegreen;
+    background-color: greenyellow;
+    color: darkgreen;
     border-radius: 10px;
 }
 
@@ -108,15 +118,19 @@ body {
     height: 30px;
     width: 180px;
     background-color: whitesmoke;
+    letter-spacing: 1px;
     color: gray;
     border: none;
     border-radius: 7px;
     padding: 5px 10px;
 }
 #submit-radius {
-    height: 30px;
+    height: 40px;
     width: 180px;
-    background-color: steelblue;
+    font-size: 16px;
+    background-color: darkgreen;
+    letter-spacing: 1px;
+    margin-left: 10px;
     color: white;
     border: none;
     border-radius: 7px;
@@ -125,4 +139,14 @@ body {
     margin: auto;
     padding: 10px;
     text-align: center;
+}
+
+/* source: https://www.codewall.co.uk/css-text-shaking-animation-effect-with-code/ */
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
 }

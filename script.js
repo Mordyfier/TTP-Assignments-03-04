@@ -20,12 +20,14 @@ function fight (button) {
 function stillRight (button) {
     // replaces the current 'right' button's message with one that is more appropriate
     document.getElementById(`button-${button}-text`).innerHTML = "I'm still right!";
+    document.getElementById(`button-${button}-text`).style.animation = "shake .7s .1s 1"; 
 }
 
 function retort (button) {
     // swaps the two buttons' messages using a truey-falsey trick
-    document.getElementById(`button-${button}-text`).innerHTML = ""
-    document.getElementById(`button-${Number(!button)}-text`).innerHTML = "No, <em>I'm</em> right!"
+    document.getElementById(`button-${button}-text`).innerHTML = "";
+    document.getElementById(`button-${button}-text`).style.animation = ""; 
+    document.getElementById(`button-${Number(!button)}-text`).innerHTML = "No, <em>I'm</em> right!";
 }
 
 //2. Hover-averse text:
