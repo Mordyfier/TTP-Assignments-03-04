@@ -68,6 +68,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: lavender;
+    color: cornflowerblue;
     height: 375px;
     width: 300px;
     margin: 0 auto;
@@ -78,7 +79,8 @@ body {
     width: 200px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid steelblue;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 500;
@@ -86,10 +88,10 @@ body {
 }
 
 #form-submit {
-    font-family: 'PT Sans', sans-serif;
     height: 40px;
     width: 180px;
-    background-color: steelblue;
+    background-color: cornflowerblue;
+    font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -104,7 +106,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 800px;
-    height: 250px;
+    height: 300px;
     margin: 50px auto;
     background-color: greenyellow;
     color: darkgreen;
@@ -118,8 +120,11 @@ body {
     height: 30px;
     width: 180px;
     background-color: whitesmoke;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
     letter-spacing: 1px;
-    color: gray;
+    color: darkgreen;
     border: none;
     border-radius: 7px;
     padding: 5px 10px;

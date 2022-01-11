@@ -60,10 +60,23 @@ const radiusSubmit = document.getElementById('submit-radius');
 const rad = document.getElementById('sphere-radius');
 const result = document.getElementById('sphere-result');
 radiusSubmit.addEventListener('click', () => {
-    const radius = Number(rad.value);
-    if (radius < 0) {
-        result.textContent = "Negative volume."
+    if (rad.value === "") {
+        result.innerHTML = `Please enter a value.` 
     } else {
-        result.textContent = `The volume of a sphere with radius ${radius} ≈ ${Math.floor((4/3)*Math.PI*Math.pow(radius, 3)*1000)/1000}.`;
+        const radius = Number(rad.value);
+        rad.value = "";
+        if (radius < 0) {
+            result.innerHTML = `Negative radius entered. Negative volume is not defined.` 
+        } else if (radius >= 0) {
+            const volume = (4/3)*Math.PI*Math.pow(radius, 3);
+            if (volume === Math.trunc(volume)) {
+                result.textContent = `The volume of a sphere with radius ${radius} is ${volume}.`;
+            } else {
+                result.textContent = `The volume of a sphere with radius ${radius} is approx. ${Math.floor(volume*1000)/1000}.`;
+            }
+            
+        } else {
+            result.innerHTML = "Not a Number entered. <br> As such, the volume is also not a number."
+        }
     }
 });
